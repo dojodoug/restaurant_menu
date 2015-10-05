@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menu</h1>
+
+<% @courses.each do |course| %>
+  <h2><%= course.name %></h2>
+    <% course.dishes.each do |dish| %>
+      <tr>
+        <th><%= dish.name %></th>
+        <th><%= dish.description %></th>
+        <th><%= dish.price %></th>
+      </tr>
+    <% end %>
+  <p><%= link_to 'Add to ' + course.name, new_dish_path(course_id: course.id)%></p>
+<% end %>
