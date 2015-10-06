@@ -13,3 +13,67 @@
  *= require_tree .
  *= require_self
  */
+ .menu-blocks {
+   background-color: #DCCCFF;
+   height: 150px;
+   width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0px 10px 0px 10px;
+ }
+
+ .menu {
+   text-align: center;
+   font-family: Lato;
+   font-size: 78px;
+ }
+
+.appetizer-image {
+   display: block;
+   margin-top: 80px;
+   margin-left: auto;
+   margin-right: auto;
+   height: 75px;
+   width: 275px;
+  }
+
+.entree-image {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height:150px;
+   width: 300px;
+  }
+
+.dessert-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 350px;
+}
+
+.addto-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Merriweather;
+}
+
+.dish-name {
+  text-align: center;
+  font-size: 28px;
+  font-family: Lato-BoldItalic;
+  text-decoration: none;
+}
+
+.menu-item {
+  text-align: center;
+  font-size: 22px;
+  font-family: Merriweather;
+}
+
+#price {
+  font-size: 28px;
+  font-family: Lato-LightItalic;
+}

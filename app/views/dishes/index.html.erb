@@ -1,21 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Menu</h1>
+<div>
+<h1 class="menu">Menu</h1>
 
 <% @courses.each do |course| %>
   <% if course.id == 1 %>
-    <%= image_tag asset_url("appetizer-logo.png"), class: "menu-image" %>
+    <%= image_tag asset_url("appetizer-logo.png"), class: "appetizer-image" %>
   <% elsif course.id == 2 %>
-    <%= image_tag asset_url("entree.png"), class: "menu-image" %>
+    <%= image_tag asset_url("entree.png"), class: "entree-image" %>
   <% else course.id == 3 %>
-    <%= image_tag asset_url("dessert.jpg"), class: "menu-image" %>
+    <%= image_tag asset_url("dessert.jpg"), class: "dessert-image" %>
   <% end %>
 
-  <h2><%= course.name %></h2>
-    <% course.dishes.each do |dish| %>
-      <p><%= link_to "#{dish.name}", edit_dish_path(dish) %></p>
-      <p><%= dish.description %></p>
-      <p><%= dish.price %></p>
-    <% end %>
-  <p><%= link_to "Add to #{course.name}", new_dish_path(course_id: course.id)%></p>
+  <!-- <h2><%= course.name %></h2> -->
+
+  <% course.dishes.each do |dish| %>
+    <div class="menu-blocks">
+      <br>
+      <p class="dish-name"><%= link_to "#{dish.name}", edit_dish_path(dish) %> <span id="price">$<%= dish.price %></span></p>
+      <p class="menu-item"><%= dish.description %></p>
+    </div>
+  <% end %>
+  <p class="addto-link"><%= link_to "Add to #{course.name}", new_dish_path(course_id: course.id)%></p>
 <% end %>
+</div>
