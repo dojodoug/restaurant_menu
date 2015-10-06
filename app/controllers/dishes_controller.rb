@@ -4,7 +4,6 @@ class DishesController < ApplicationController
   # GET /dishes
   def index
     @courses = Course.all
-    @dishes = Dish.all
   end
 
   # GET /dishes/1
@@ -13,7 +12,7 @@ class DishesController < ApplicationController
 
   # GET /dishes/new
   def new
-    @dish = Dish.new
+    @dish = Dish.new(course_id: params[:course_id])
   end
 
   # GET /dishes/1/edit
@@ -54,6 +53,6 @@ class DishesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dish_params
-      params.require(:dish).permit(:price, :name, :description)
+      params.require(:dish).permit(:price, :name, :description, :course_id)
     end
 end

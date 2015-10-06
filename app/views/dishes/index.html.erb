@@ -3,13 +3,19 @@
 <h1>Menu</h1>
 
 <% @courses.each do |course| %>
+  <% if course.id == 1 %>
+    <%= image_tag asset_url("appetizer-logo.png"), class: "menu-image" %>
+  <% elsif course.id == 2 %>
+    <%= image_tag asset_url("entree.png"), class: "menu-image" %>
+  <% else course.id == 3 %>
+    <%= image_tag asset_url("dessert.jpg"), class: "menu-image" %>
+  <% end %>
+
   <h2><%= course.name %></h2>
     <% course.dishes.each do |dish| %>
-      <tr>
-        <th><%= dish.name %></th>
-        <th><%= dish.description %></th>
-        <th><%= dish.price %></th>
-      </tr>
+      <p><%= link_to "#{dish.name}", edit_dish_path(dish) %></p>
+      <p><%= dish.description %></p>
+      <p><%= dish.price %></p>
     <% end %>
-  <p><%= link_to 'Add to ' + course.name, new_dish_path(course_id: course.id)%></p>
+  <p><%= link_to "Add to #{course.name}", new_dish_path(course_id: course.id)%></p>
 <% end %>
