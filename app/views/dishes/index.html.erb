@@ -21,6 +21,8 @@
       <p class="menu-item"><%= dish.description %></p>
     </div>
   <% end %>
-  <p class="addto-link"><%= link_to "Add to #{course.name}", new_dish_path(course_id: course.id)%></p>
+  <div class="addto-block"
+    <p><%= link_to "Add to #{course.name}", new_dish_path(course_id: course.id)%></p>
+  </div>
 <% end %>
 </div>

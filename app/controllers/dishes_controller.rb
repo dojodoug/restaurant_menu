@@ -8,6 +8,7 @@ class DishesController < ApplicationController
 
   # GET /dishes/1
   def show
+    redirect_to dishes_path
   end
 
   # GET /dishes/new

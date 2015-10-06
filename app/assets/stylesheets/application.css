@@ -22,6 +22,20 @@
    padding: 0px 10px 0px 10px;
  }
 
+ .addto-block {
+   background-color: #DCD5DD;
+   height: 40px;
+   width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0px 10px 0px 10px;
+   text-align: center;
+   font-size: 28px;
+   font-family: Lato-BoldItalic;
+   text-decoration: none;
+   padding: 20px 10px 5px 10px;
+ }
+
  .menu {
    text-align: center;
    font-family: Lato;
@@ -51,13 +65,6 @@
   margin-right: auto;
   height: 200px;
   width: 350px;
-}
-
-.addto-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-family: Merriweather;
 }
 
 .dish-name {
